@@ -1,7 +1,9 @@
 export const RegisterUserQuery = `
 mutation($input:userinput!){
-    addNewUser(userInput:$input){
+    registerNewUser(userInput:$input){
      user_id
      token
+     message
+     userCreated
     }}
  `
