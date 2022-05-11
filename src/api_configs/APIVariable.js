@@ -1,6 +1,9 @@
-export const RegisterUserVariables = {
-    input: {
-        user_id: "userName",
-        password: "password"
-     },
+export const updateMenuVariables = {
+
+    "input": {
+        "item": "Dosa",
+        "type": "false",
+        "price": "20"
+    }
+
 }

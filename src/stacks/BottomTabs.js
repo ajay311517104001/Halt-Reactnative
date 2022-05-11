@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
 
-import { Profile , Update , Test , History} from '../screens/index';
+import { Home , Update , History} from '../screens/index';
 
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 
@@ -12,7 +12,7 @@ const Tab = createMaterialBottomTabNavigator();
 
 
 
-const BottomTabs =( {navigation}) => {
+const BottomTabs =( ) => {
  
 
 
@@ -21,11 +21,13 @@ const BottomTabs =( {navigation}) => {
     <Tab.Navigator
     initialRouteName="index"
     activeColor="white"
-    barStyle={{ backgroundColor: 'green' }}
+    barStyle={{ backgroundColor: 'rgb(71,8,4)' }
+  }
+  
   >
     <Tab.Screen
       name="index"
-      component={Profile}
+      component={Home}
       options={{
         tabBarLabel: 'Home',
         tabBarIcon: ({ color }) => (
@@ -37,13 +39,13 @@ const BottomTabs =( {navigation}) => {
       name="Notifications"
       component={Update}
       options={{
-        tabBarLabel: 'Updates',
+        tabBarLabel: 'Orders',
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons name="bell" color={color} size={26} />
         ),
       }}
     />
-    <Tab.Screen
+    {/* <Tab.Screen
       name="Test"
       component={Test}
       options={{
@@ -52,7 +54,7 @@ const BottomTabs =( {navigation}) => {
           <MaterialCommunityIcons name="test-tube" color={color} size={26} />
         ),
       }}
-    />
+    /> */}
      <Tab.Screen
       name="d"
       component={History}
