@@ -7,3 +7,13 @@ export const updateMenuVariables = {
     }
 
 }
+
+export const incomingOrderVariables = {
+
+    "input": {
+        "name": "ajay",
+        "items": "obj",
+        "total": "520"
+    }
+
+}

@@ -21,3 +21,10 @@ export const getMenuQuery = `
     }
   }
  `
+export const incomingOrderQuery=`
+mutation($input:incomingOrderInput!){
+  incomingOrder(incomingOrderInput:$input){
+    
+    message
+  }
+}`
