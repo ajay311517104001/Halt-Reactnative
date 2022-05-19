@@ -1,3 +1,3 @@
 export {default as Home} from './Home'
-export {default as Update} from './Update'
+export {default as IncomingOrder} from './IncomingOrder'
 export {default as History} from './History'

@@ -28,3 +28,37 @@ mutation($input:incomingOrderInput!){
     message
   }
 }`
+
+export const getIncomingOrderQuery=`{
+  getIncomingOrders {
+    orderList{
+     id,
+     name,
+     items{
+       item_name,
+       count
+     },
+     total,
+     status
+     
+     
+   }
+ }
+ }`
+
+ export const exitFromFlowQuery=`query($input:exitFromFlowInput!){
+  exitFromFlow(exitFromFlowId:$input){
+   orderList{
+   id,
+    name,
+    items{
+      item_name,
+      count
+    },
+    total,
+    status
+   
+   
+   },
+   error
+ }}`

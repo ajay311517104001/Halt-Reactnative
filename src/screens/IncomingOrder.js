@@ -6,12 +6,12 @@ import {URL} from '../api_configs/APIProxy'
 const { width, height } = Dimensions.get('window');
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 
-const History = (props) => {
+const IncomingOrder = (props) => {
 
 
-   console.log("this is the trigger",props.order)
-   const {orders}=props
+   console.log("this is the trigger",props)
     // const [orders, setOrders] = useState([])
+    const {orders}=props
     const [showModal, setShowModal] = useState(false);
     const [viewItem,setViewItem]=useState([])
 
@@ -82,17 +82,16 @@ const History = (props) => {
                 {
  
                     orders.map((order, index) => {
-                     if(order.status=='true'){
+                     if(order.status=='false'){
                          return(
                             <Box bg='red.100' h={height * 0.05} width='97%' mt='1.5%' key={index} flexDirection='row' alignItems='center'>
 
                             <Box width='25%' alignItems='center' _text={{ fontSize:'2xl', fontWeight:'bold'}}>{order.name}</Box>
                             <Box width='25%' alignItems='center'><Button bg='rgb(71,8,4)' onPress={()=>onViewItems(index)}>View Order</Button></Box>
-                            <Box width='25%' alignItems='center' _text={{ fontSize:'2xl',color:'green.800',fontWeight:'medium'}} mt='3%'>{order.total + ' Rs'} </Box>
-                            <Box width='25%' alignItems='center' _text={{ fontSize:'2xl',color:'green.800',fontWeight:'bold'}}  >
-                            {/* <MaterialCommunityIcons name="location-exit" color={'green'} size={50} onPress={()=> props.onExitFromFlow(order)}/>
-                            <MaterialCommunityIcons name="alpha-x-circle-outline" color={'red'} size={28} /> */}
-                            Completed
+                            <Box width='25%' alignItems='center' _text={{ fontSize:'2xl'}} mt='3%'>{order.total + ' Rs'} </Box>
+                            <Box width='25%' alignItems='center' flexDirection='row' justifyContent='space-evenly' marginLeft='2%'>
+                            <MaterialCommunityIcons name="location-exit" color={'green'} size={50} onPress={()=> props.onExitFromFlow(order)}/>
+                            <MaterialCommunityIcons name="alpha-x-circle-outline" color={'red'} size={28} />
                             </Box>
 
 
@@ -144,4 +143,4 @@ const History = (props) => {
     );
 }
 
-export default History;
+export default IncomingOrder;

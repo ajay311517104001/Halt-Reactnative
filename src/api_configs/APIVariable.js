@@ -9,11 +9,19 @@ export const updateMenuVariables = {
 }
 
 export const incomingOrderVariables = {
-
     "input": {
-        "name": "ajay",
-        "items": "obj",
-        "total": "520"
+      "name": "ajay",
+      "items": [ {"item_name": "IM",
+                 "count": "5"},
+        {"item_name":"IC",
+        "count": "4"}],
+      "total": "520"
     }
+  }
 
-}
+  export const exitFromFlowVariables={
+    "input": {
+      "id": "115"
+     
+    }
+  }
