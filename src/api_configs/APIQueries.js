@@ -62,3 +62,45 @@ export const getIncomingOrderQuery=`{
    },
    error
  }}`
+
+ export const cancelOrderQuery =`mutation($input: cancelOrderInput!){
+  cancelOrder(cancelOrderInput:$input){
+    orderList{
+      id,
+     name,
+     items{
+       item_name,
+       count
+     },
+     total,
+     status
+    }
+    error
+  }
+}`
+
+
+export const updateOrderQuery =`
+mutation($input: updateOrderInput!){
+  updateOrder(updateOrderInput:$input){
+    orderList{
+      id,
+     name,
+     items{
+       item_name,
+       count
+     },
+     total,
+     status
+    }
+    error
+  }
+}
+`
+
+export const deleteMenuItemQuery =`
+mutation($input:delete_menu_inputobj!){
+  deleteMenuItem(deleteMenuInput:$input){
+    message
+  }
+}`

@@ -67,7 +67,7 @@ const History = (props) => {
     return (
         <Box flex={1} >
             <Box flex={.11} bg='rgb(71,8,4)' alignItems='center' justifyContent='center' >
-                <Image source={require('./../assets/images/logo.jpeg')} alt='logo' />
+                <Image source={require('./../assets/images/logo.jpeg')} alt='logo' size='sm'/>
             </Box>
             <Box flex={1} alignItems='center' >
                 <Box h={height * 0.03} width='95%' mt='1%' flexDirection='row' alignItems='center' bg='rgb(71,8,4)' >
@@ -86,12 +86,11 @@ const History = (props) => {
                          return(
                             <Box bg='red.100' h={height * 0.05} width='97%' mt='1.5%' key={index} flexDirection='row' alignItems='center'>
 
-                            <Box width='25%' alignItems='center' _text={{ fontSize:'2xl', fontWeight:'bold'}}>{order.name}</Box>
-                            <Box width='25%' alignItems='center'><Button bg='rgb(71,8,4)' onPress={()=>onViewItems(index)}>View Order</Button></Box>
-                            <Box width='25%' alignItems='center' _text={{ fontSize:'2xl',color:'green.800',fontWeight:'medium'}} mt='3%'>{order.total + ' Rs'} </Box>
-                            <Box width='25%' alignItems='center' _text={{ fontSize:'2xl',color:'green.800',fontWeight:'bold'}}  >
-                            {/* <MaterialCommunityIcons name="location-exit" color={'green'} size={50} onPress={()=> props.onExitFromFlow(order)}/>
-                            <MaterialCommunityIcons name="alpha-x-circle-outline" color={'red'} size={28} /> */}
+                            <Box width='25%' alignItems='center' _text={{ fontSize:'sm', fontWeight:'bold'}}>{order.name}</Box>
+                            <Box width='25%' alignItems='center'><Button bg='rgb(71,8,4)' onPress={()=>onViewItems(index)} size='sm'>View Order</Button></Box>
+                            <Box width='25%' alignItems='center' _text={{ fontSize:'md',color:'green.800',fontWeight:'medium'}} flexDirection='row' justifyContent='center'>{order.total + ' Rs'} </Box>
+                            <Box width='25%' alignItems='center' _text={{ fontSize:'md',color:'green.800',fontWeight:'bold'}}  >
+    
                             Completed
                             </Box>
 

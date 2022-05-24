@@ -67,7 +67,7 @@ const IncomingOrder = (props) => {
     return (
         <Box flex={1} >
             <Box flex={.11} bg='rgb(71,8,4)' alignItems='center' justifyContent='center' >
-                <Image source={require('./../assets/images/logo.jpeg')} alt='logo' />
+                <Image source={require('./../assets/images/logo.jpeg')} alt='logo' size='sm' />
             </Box>
             <Box flex={1} alignItems='center' >
                 <Box h={height * 0.03} width='95%' mt='1%' flexDirection='row' alignItems='center' bg='rgb(71,8,4)' >
@@ -86,12 +86,16 @@ const IncomingOrder = (props) => {
                          return(
                             <Box bg='red.100' h={height * 0.05} width='97%' mt='1.5%' key={index} flexDirection='row' alignItems='center'>
 
-                            <Box width='25%' alignItems='center' _text={{ fontSize:'2xl', fontWeight:'bold'}}>{order.name}</Box>
-                            <Box width='25%' alignItems='center'><Button bg='rgb(71,8,4)' onPress={()=>onViewItems(index)}>View Order</Button></Box>
-                            <Box width='25%' alignItems='center' _text={{ fontSize:'2xl'}} mt='3%'>{order.total + ' Rs'} </Box>
+                            <Box width='25%' alignItems='center' _text={{ fontSize:'sm', fontWeight:'bold',ml:'11%'}} flexDirection='row' justifyContent='flex-start' >
+                            <MaterialCommunityIcons name="chevron-left-circle" color='rgb(71,8,4)' size={30}  onPress={()=> console.log('dosta')}/>
+
+                                {order.name}</Box>
+                            <Box width='25%' alignItems='center' ><Button bg='rgb(71,8,4)' onPress={()=>onViewItems(index)} size='xs'>View Order</Button></Box>
+                            <Box width='25%' alignItems='center' _text={{ fontSize:'sm'}} flexDirection='row' justifyContent='center'>{order.total + ' Rs'} </Box>
                             <Box width='25%' alignItems='center' flexDirection='row' justifyContent='space-evenly' marginLeft='2%'>
-                            <MaterialCommunityIcons name="location-exit" color={'green'} size={50} onPress={()=> props.onExitFromFlow(order)}/>
-                            <MaterialCommunityIcons name="alpha-x-circle-outline" color={'red'} size={28} />
+                            <MaterialCommunityIcons name="location-exit" color={'green'} size={30}  onPress={()=> props.onExitFromFlow(order)}/>
+
+                            <MaterialCommunityIcons name="alpha-x-circle-outline" color={'red'} size={20}  onPress={()=> props.onCancelFromFlow(order)}/>
                             </Box>
 
 
